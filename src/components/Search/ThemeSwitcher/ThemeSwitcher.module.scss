@@ -1,0 +1,40 @@
+:global {
+    body[data-theme='light'] {
+      --switcher-color: var(--gray-100);
+      --switcher-color-hover: var(--gray-300);
+    }
+
+    body[data-theme='dark'] {
+      --switcher-color: var(--white);
+      --switcher-color-hover: var(--gray-100);
+    }
+  }
+
+  .switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    cursor: pointer;
+
+    span {
+      color: var(--switcher-color);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+    }
+
+    &:hover {
+      span {
+        color: var(--switcher-color-hover);
+      }
+
+      svg {
+        fill: var(--switcher-color-hover);
+      }
+    }
+  }
+
+  .icon {
+    margin-bottom: 3px;
+    fill: var(--switcher-color);
+  }
